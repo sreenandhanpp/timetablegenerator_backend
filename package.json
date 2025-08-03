@@ -1,0 +1,29 @@
+{
+  "type": "commonjs",
+  "name": "timetable-generator",
+  "version": "1.0.0",
+  "description": "A web application for generating and managing timetables",
+  "main": "server.js",
+  "author": "Sreenandhan P P",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"  
+  },
+   "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "setup": "node setup.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
