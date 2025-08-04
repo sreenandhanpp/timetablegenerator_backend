@@ -1,0 +1,115 @@
+[
+  { "subjectCode": "MAT206", "subjectName": "GRAPH THEORY", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 5, "semester": 4, "department": "CSE", "isActive": true },
+  { "subjectCode": "CST202", "subjectName": "COMPUTER ORGANIZATION AND ARCHITECTURE", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 5, "semester": 4, "department": "CSE", "isActive": true },
+  { "subjectCode": "CST204", "subjectName": "DATABASE MANAGEMENT SYSTEMS", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 5, "semester": 4, "department": "CSE", "isActive": true },
+  { "subjectCode": "CST206", "subjectName": "OPERATING SYSTEMS", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 5, "semester": 4, "department": "CSE", "isActive": true },
+  { "subjectCode": "HUT200", "subjectName": "PROFESSIONAL ETHICS", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 2, "semester": 4, "department": "CSE", "isActive": true },
+  { "subjectCode": "MCN202", "subjectName": "CONSTITUTION OF INDIA", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 2, "semester": 4, "department": "CSE", "isActive": true },
+  { "subjectCode": "CSL202", "subjectName": "DIGITAL LAB", "subjectType": "Lab", "faculty": null, "labName": "DIGITAL LAB", "periodsPerWeek": 3, "semester": 4, "department": "CSE", "isActive": true },
+  { "subjectCode": "CSL204", "subjectName": "OPERATING SYSTEMS LAB", "subjectType": "Lab", "faculty": null, "labName": "OPERATING SYSTEMS LAB", "periodsPerWeek": 3, "semester": 4, "department": "CSE", "isActive": true },
+  { "subjectCode": "ECT284", "subjectName": "DIGITAL COMMUNICATION (MINOR)", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 4, "semester": 4, "department": "CSE", "isActive": true },
+  { "subjectCode": "CST292", "subjectName": "NUMBER THEORY (HONOURS)", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 4, "semester": 4, "department": "CSE", "isActive": true },
+
+  { "subjectCode": "CST302", "subjectName": "COMPILER DESIGN", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 5, "semester": 6, "department": "CSE", "isActive": true },
+  { "subjectCode": "CST304", "subjectName": "COMPUTER GRAPHICS AND IMAGE PROCESSING", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 5, "semester": 6, "department": "CSE", "isActive": true },
+  { "subjectCode": "CST306", "subjectName": "ALGORITHM ANALYSIS AND DESIGN", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 5, "semester": 6, "department": "CSE", "isActive": true },
+  { "subjectCode": "HUT300", "subjectName": "INDUSTRIAL ECONOMICS AND FOREIGN TRADE", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 3, "semester": 6, "department": "CSE", "isActive": true },
+  { "subjectCode": "CST308", "subjectName": "COMPREHENSIVE COURSE WORK", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 1, "semester": 6, "department": "CSE", "isActive": true },
+  { "subjectCode": "CST362", "subjectName": "PROGRAM ELECTIVE I - PROGRAMMING IN PYTHON", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 3, "semester": 6, "department": "CSE", "isActive": true },
+  { "subjectCode": "CST372", "subjectName": "DATA AND COMPUTER COMMUNICATION", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 3, "semester": 6, "department": "CSE", "isActive": true },
+  { "subjectCode": "CSL332", "subjectName": "NETWORKING LAB", "subjectType": "Lab", "faculty": null, "labName": "NETWORKING LAB", "periodsPerWeek": 3, "semester": 6, "department": "CSE", "isActive": true },
+  { "subjectCode": "CSD334", "subjectName": "MINI PROJECT", "subjectType": "Lab", "faculty": null, "labName": "MINI PROJECT", "periodsPerWeek": 6, "semester": 6, "department": "CSE", "isActive": true },
+  { "subjectCode": "CST394", "subjectName": "NETWORK SECURITY (HONOURS)", "subjectType": "Lecture", "faculty": null, "periodsPerWeek": 4, "semester": 6, "department": "CSE", "isActive": true },
+
+  {
+    "subjectCode": "CST402",
+    "subjectName": "DISTRIBUTED COMPUTING",
+    "subjectType": "Lecture",
+    "faculty": null,
+    "periodsPerWeek": 4,
+    "semester": 8,
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "subjectCode": "CST424",
+    "subjectName": "PROGRAM ELECTIVE III",
+    "subjectType": "Lecture",
+    "faculty": null,
+    "periodsPerWeek": 3,
+    "semester": 8,
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "subjectCode": "CST434",
+    "subjectName": "PROGRAM ELECTIVE III",
+    "subjectType": "Lecture",
+    "faculty": null,
+    "periodsPerWeek": 3,
+    "semester": 8,
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "subjectCode": "CST426",
+    "subjectName": "PROGRAM ELECTIVE IV",
+    "subjectType": "Lecture",
+    "faculty": null,
+    "periodsPerWeek": 3,
+    "semester": 8,
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "subjectCode": "CST476",
+    "subjectName": "PROGRAM ELECTIVE IV",
+    "subjectType": "Lecture",
+    "faculty": null,
+    "periodsPerWeek": 3,
+    "semester": 8,
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "subjectCode": "CST448",
+    "subjectName": "PROGRAM ELECTIVE V",
+    "subjectType": "Lecture",
+    "faculty": null,
+    "periodsPerWeek": 3,
+    "semester": 8,
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "subjectCode": "CST458",
+    "subjectName": "PROGRAM ELECTIVE IV",
+    "subjectType": "Lecture",
+    "faculty": null,
+    "periodsPerWeek": 3,
+    "semester": 8,
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "subjectCode": "CST404",
+    "subjectName": "COMPREHENSIVE VIVA",
+    "subjectType": "Lecture",
+    "faculty": null,
+    "periodsPerWeek": 1,
+    "semester": 8,
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "subjectCode": "CSD416",
+    "subjectName": "PROJECT PHASE II",
+    "subjectType": "Lab",
+    "faculty": null,
+    "labName": "PROJECT PHASE II",
+    "periodsPerWeek": 12,
+    "semester": 8,
+    "department": "CSE",
+    "isActive": true
+  }
+]

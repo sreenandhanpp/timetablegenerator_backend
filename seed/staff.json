@@ -1,0 +1,187 @@
+[
+  {
+    "name": "UNNIKRISHNAN S KUMAR",
+    "email": "uksknair@gmail.com",
+    "phone": "9495419504",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "DHANYAJA P",
+    "email": "dhanyaja4047.cse@jawaharlalcolleges.com",
+    "phone": "8943663487",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "NITHA T M",
+    "email": "tmnitha@gmail.com",
+    "phone": "9446308443",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "NISNA HANEEFA K",
+    "email": "nisna4043.cse@jawaharlalcolleges.com",
+    "phone": "8304079569",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "AMBARISH A",
+    "email": "ambrish4056.cse@jawaharcolleges.com",
+    "phone": "9495176525",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "RESMI C S",
+    "email": "resmi345@gmail.com",
+    "phone": "6238869110",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "SHISHIRA M C",
+    "email": "shishira3990.cse@jawaharlalcolleges.com",
+    "phone": "7994143198",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "AKHILA E",
+    "email": "akhila3972.cse@jawaharlalcolleges.com",
+    "phone": "9847788306",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "REMYA M",
+    "email": "remya3956.cse@jawaharlalcolleges.com",
+    "phone": "7994232332",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "ALI ASKAR K M",
+    "email": "aliaskarkm786@gmail.com",
+    "phone": "9605478060",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "DIVYA VISAKH",
+    "email": "divya3954.cse@jawaharlalcolleges.com",
+    "phone": "8281542995",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "MANOJ M",
+    "email": "manoj@gmail.com",
+    "phone": "0000000000",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "R SATHEESH KUMAR",
+    "email": "satheesh@gmail.com",
+    "phone": "0000000000",
+    "designation": "HOD",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "NF1",
+    "email": "nf1@placeholder.com",
+    "phone": "0000000000",
+    "designation": "Non-Faculty",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+  "name": "SADANANDAN R",
+  "email": "sadanandan.mechanical@demo.com",
+  "phone": "9876543210",
+  "designation": "Assistant Professor",
+  "department": "MECH",
+  "isActive": true
+  
+},{
+  "name": "SREESANKAR J",
+  "email": "sreesankar.ece@demo.com",
+  "phone": "9123456789",
+  "designation": "Assistant Professor",
+  "department": "ECE",
+  "isActive": true
+},
+  {
+    "name": "REMYA K P",
+    "email": "remya.kp@ece.demo.com",
+    "phone": "9112233445",
+    "designation": "Assistant Professor",
+    "department": "ECE",
+    "isActive": true
+  },
+  {
+    "name": "JISHA K V",
+    "email": "jisha.kv@ece.demo.com",
+    "phone": "9123344556",
+    "designation": "Assistant Professor",
+    "department": "ECE",
+    "isActive": true
+  },
+  {
+    "name": "KRISHNA PRASAD C N",
+    "email": "kp.cn@mech.demo.com",
+    "phone": "9134455667",
+    "designation": "Assistant Professor",
+    "department": "ME",
+    "isActive": true
+  },
+  {
+    "name": "NITHIN RAJ",
+    "email": "nithin.raj@mech.demo.com",
+    "phone": "9145566778",
+    "designation": "Assistant Professor",
+    "department": "ME",
+    "isActive": true
+  },
+  {
+    "name": "SMEGHA",
+    "email": "smegha@cse.demo.com",
+    "phone": "9156677889",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "KRISHNA VENI KR",
+    "email": "krishna.veni@cse.demo.com",
+    "phone": "9167788990",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  },
+  {
+    "name": "THASLEEMA N U",
+    "email": "thasleema.nu@cse.demo.com",
+    "phone": "9178899001",
+    "designation": "Assistant Professor",
+    "department": "CSE",
+    "isActive": true
+  }
+
+]

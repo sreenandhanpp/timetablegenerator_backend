@@ -3,216 +3,29 @@ const Timetable = require('../models/Timetable');
 const Subject = require('../models/Subject');
 const Config = require('../models/Config');
 const { authenticateToken, requireAdmin } = require('../middlewares/auth');
+const generateTimetable = require('../utils/generateTimetable');
 
 const router = express.Router();
-
-// Generate time slots based on config
-const generateTimeSlots = (config) => {
-  const slots = [];
-  const startTime = config.classStartTime;
-  const endTime = config.classEndTime;
-  const periodDuration = config.periodDuration;
-  
-  // Add QCPC if enabled
-  if (config.qcpcEnabled) {
-    slots.push({
-      start: config.qcpcTime.start,
-      end: config.qcpcTime.end,
-      type: 'qcpc'
-    });
-  }
-
-  // Parse start time
-  let [hours, minutes] = startTime.split(':').map(Number);
-  let currentTime = new Date();
-  currentTime.setHours(hours, minutes, 0, 0);
-
-  // Parse end time
-  const [endHours, endMinutes] = endTime.split(':').map(Number);
-  const endDateTime = new Date();
-  endDateTime.setHours(endHours, endMinutes, 0, 0);
-
-  while (currentTime < endDateTime) {
-    const slotStart = `${currentTime.getHours().toString().padStart(2, '0')}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
-    
-    // Check for breaks
-    let isBreak = false;
-    let breakName = '';
-    
-    // Check lunch break
-    if (slotStart >= config.lunchBreak.start && slotStart < config.lunchBreak.end) {
-      isBreak = true;
-      breakName = 'Lunch Break';
-    }
-    
-    // Check other breaks
-    for (const breakTime of config.breakTimes) {
-      if (slotStart >= breakTime.start && slotStart < breakTime.end) {
-        isBreak = true;
-        breakName = breakTime.name;
-        break;
-      }
-    }
-
-    // Add period duration
-    currentTime.setMinutes(currentTime.getMinutes() + periodDuration);
-    const slotEnd = `${currentTime.getHours().toString().padStart(2, '0')}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
-
-    slots.push({
-      start: slotStart,
-      end: slotEnd,
-      type: isBreak ? 'break' : 'lecture',
-      name: isBreak ? breakName : ''
-    });
-
-    // Add break duration if it's a break
-    if (isBreak) {
-      // Skip to end of break
-      if (breakName === 'Lunch Break') {
-        const [lunchEndHours, lunchEndMinutes] = config.lunchBreak.end.split(':').map(Number);
-        currentTime.setHours(lunchEndHours, lunchEndMinutes, 0, 0);
-      } else {
-        const breakTime = config.breakTimes.find(bt => bt.name === breakName);
-        if (breakTime) {
-          const [breakEndHours, breakEndMinutes] = breakTime.end.split(':').map(Number);
-          currentTime.setHours(breakEndHours, breakEndMinutes, 0, 0);
-        }
-      }
-    }
-  }
-
-  return slots;
-};
-
-// Simple timetable generation algorithm
-const generateTimetableData = async (semester, department, subjects, config) => {
-  const timeSlots = generateTimeSlots(config);
-  const days = config.workingDays;
-  const entries = [];
-
-  // Filter available lecture slots
-  const lectureSlots = timeSlots.filter(slot => slot.type === 'lecture');
-  
-  let slotIndex = 0;
-  
-  // Distribute subjects across days and time slots
-  for (const subject of subjects) {
-    for (let period = 0; period < subject.periodsPerWeek; period++) {
-      if (slotIndex >= lectureSlots.length * days.length) {
-        break; // No more slots available
-      }
-
-      const dayIndex = Math.floor(slotIndex / lectureSlots.length);
-      const timeSlotIndex = slotIndex % lectureSlots.length;
-      
-      if (dayIndex < days.length) {
-        const timeSlot = lectureSlots[timeSlotIndex];
-        
-        entries.push({
-          day: days[dayIndex],
-          timeSlot: {
-            start: timeSlot.start,
-            end: timeSlot.end
-          },
-          subject: subject._id,
-          type: subject.subjectType.toLowerCase(),
-          room: subject.subjectType === 'Lab' ? subject.labName : `Room ${Math.floor(Math.random() * 20) + 101}`
-        });
-      }
-      
-      slotIndex++;
-    }
-  }
-
-  // Add breaks and QCPC to all days
-  for (const day of days) {
-    // Add QCPC
-    if (config.qcpcEnabled) {
-      entries.push({
-        day,
-        timeSlot: {
-          start: config.qcpcTime.start,
-          end: config.qcpcTime.end
-        },
-        type: 'qcpc'
-      });
-    }
-
-    // Add lunch break
-    entries.push({
-      day,
-      timeSlot: {
-        start: config.lunchBreak.start,
-        end: config.lunchBreak.end
-      },
-      type: 'lunch'
-    });
-
-    // Add other breaks
-    for (const breakTime of config.breakTimes) {
-      entries.push({
-        day,
-        timeSlot: {
-          start: breakTime.start,
-          end: breakTime.end
-        },
-        type: 'break'
-      });
-    }
-  }
-
-  return entries;
-};
 
 // Generate timetable
 router.post('/generate', authenticateToken, requireAdmin, async (req, res) => {
   try {
     const { semester, department } = req.body;
+    if (!semester || !department) return res.status(400).json({ message: 'Semester and department required' });
 
-    if (!semester || !department) {
-      return res.status(400).json({ message: 'Semester and department are required' });
+    if (parseInt(semester) % 2 !== 0 || ![2, 4, 6, 8].includes(parseInt(semester))) {
+      return res.status(400).json({ message: 'Only even semesters (S2/S4/S6/S8) are allowed' });
     }
 
-    // Get subjects for the semester and department
-    const subjects = await Subject.find({
-      semester: parseInt(semester),
-      department,
-      isActive: true
-    }).populate('faculty');
+    const timetable = await generateTimetable({ semester, department });
 
-    if (subjects.length === 0) {
-      return res.status(400).json({ message: 'No subjects found for the given semester and department' });
+    if (!timetable || timetable.entries.length === 0) {
+      return res.json({ semester, entries: [] }); // S2 with no data
     }
-
-    // Get configuration
-    const config = await Config.findOne({
-      semester: parseInt(semester),
-      department
-    });
-
-    if (!config) {
-      return res.status(400).json({ message: 'Configuration not found. Please set up configuration first.' });
-    }
-
-    // Generate timetable entries
-    const entries = await generateTimetableData(semester, department, subjects, config);
-
-    // Delete existing timetable if any
-    await Timetable.deleteOne({ semester: parseInt(semester), department });
-
-    // Create new timetable
-    const timetable = new Timetable({
-      semester: parseInt(semester),
-      department,
-      entries
-    });
-
-    await timetable.save();
-    await timetable.populate('entries.subject');
 
     res.json(timetable);
-  } catch (error) {
-    res.status(500).json({ message: 'Server error', error: error.message });
+  } catch (err) {
+    res.status(500).json({ message: 'Server error', error: err.message });
   }
 });
 

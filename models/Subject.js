@@ -20,7 +20,7 @@ const subjectSchema = new mongoose.Schema({
   faculty: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Staff',
-    required: true
+    required: false
   },
   periodsPerWeek: {
     type: Number,
