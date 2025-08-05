@@ -39,8 +39,8 @@ const timetableSchema = new mongoose.Schema({
   },
   department: {
     type: String,
-    required: true,
-    enum: ['CSE', 'ECE', 'EEE', 'MECH', 'CIVIL', 'IT', 'AIDS', 'CSBS']
+    required: true
+    // enum: ['CSE', 'ECE', 'EEE', 'MECH', 'CIVIL', 'IT', 'AIDS', 'CSBS']
   },
   entries: [timetableEntrySchema],
   isActive: {
