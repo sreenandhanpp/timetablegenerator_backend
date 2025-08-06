@@ -77,7 +77,10 @@ router.get("/", async (req, res) => {
       return res.status(404).json({ message: "Timetable not found" });
     }
 
-    res.json(timetable);
+    const timetables = await generateTimetableData(allSemesterData);
+const formattedTimetables = formatTimetableForFrontend(timetables);
+res.json(formattedTimetables);
+
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
   }

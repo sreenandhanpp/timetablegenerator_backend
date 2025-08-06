@@ -1,43 +1,31 @@
-function formatTimetable(timetableData) {
-  // Group by day
-  const groupedByDay = {};
+function formatTimetableForFrontend(rawData) {
+  return rawData.map(({ semester, department, entries }) => {
+    const daysGrouped = {};
 
-  timetableData.forEach(entry => {
-    const { day, start, end, type, subject, room, semester } = entry;
-
-    if (!groupedByDay[day]) {
-      groupedByDay[day] = [];
-    }
-
-    // Find if a slot already exists for this time
-    let slot = groupedByDay[day].find(s => s.start === start && s.end === end);
-
-    if (!slot) {
-      slot = { start, end };
-      if (type === 'qcpc' || type === 'break' || type === 'lunch') {
-        slot.type = type; // non-class periods
-      } else {
-        slot.classes = [];
+    entries.forEach(entry => {
+      if (!daysGrouped[entry.day]) {
+        daysGrouped[entry.day] = [];
       }
-      groupedByDay[day].push(slot);
-    }
-
-    // Only push classes if it's not a break
-    if (type !== 'qcpc' && type !== 'break' && type !== 'lunch') {
-      slot.classes.push({
-        semester,
-        subject,
-        type,
-        room
+      daysGrouped[entry.day].push({
+        label: `${entry.timeSlot.start}-${entry.timeSlot.end}`,
+        start: entry.timeSlot.start,
+        end: entry.timeSlot.end,
+        type: entry.type,
+        subject: entry.subject?.name || null,
+        faculty: entry.subject?.faculty?.name || null,
+        room: entry.room || null
       });
-    }
-  });
+    });
 
-  // Convert grouped object to array sorted by time
-  return Object.keys(groupedByDay).map(day => ({
-    day,
-    slots: groupedByDay[day].sort((a, b) => a.start.localeCompare(b.start))
-  }));
+    return {
+      semester,
+      department,
+      days: Object.keys(daysGrouped).map(day => ({
+        day,
+        slots: daysGrouped[day]
+      }))
+    };
+  });
 }
 
-module.exports = formatTimetable;
+module.exports = formatTimetableForFrontend;
