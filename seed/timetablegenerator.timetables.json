@@ -1,0 +1,1782 @@
+[{
+  "_id": {
+    "$oid": "6892ffc7c07b2baddd8b1d11"
+  },
+  "semester": 4,
+  "department": "Computer Science",
+  "entries": [
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a16"
+      },
+      "type": "lab",
+      "room": "Operating Systems Lab",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d12"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:55",
+        "end": "10:45"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a16"
+      },
+      "type": "lab",
+      "room": "Operating Systems Lab",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d13"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "10:45",
+        "end": "11:35"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a16"
+      },
+      "type": "lab",
+      "room": "Operating Systems Lab",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d14"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a15"
+      },
+      "type": "lab",
+      "room": "Digital Lab",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d15"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:55",
+        "end": "10:45"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a15"
+      },
+      "type": "lab",
+      "room": "Digital Lab",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d16"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "10:45",
+        "end": "11:35"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a15"
+      },
+      "type": "lab",
+      "room": "Digital Lab",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d17"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a11"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d18"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a11"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d19"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a11"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d1a"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a11"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d1b"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a11"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d1c"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a0f"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d1d"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a0f"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d1e"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a0f"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d1f"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a0f"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d20"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a0f"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d21"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a10"
+      },
+      "type": "lecture",
+      "room": "Room 103",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d22"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a10"
+      },
+      "type": "lecture",
+      "room": "Room 103",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d23"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a10"
+      },
+      "type": "lecture",
+      "room": "Room 103",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d24"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a10"
+      },
+      "type": "lecture",
+      "room": "Room 103",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d25"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a10"
+      },
+      "type": "lecture",
+      "room": "Room 103",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d26"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a12"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d27"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a12"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d28"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a12"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d29"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a12"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d2a"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a12"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d2b"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a17"
+      },
+      "type": "lecture",
+      "room": "Room 104",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d2c"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a17"
+      },
+      "type": "lecture",
+      "room": "Room 104",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d2d"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a17"
+      },
+      "type": "lecture",
+      "room": "Room 104",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d2e"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a17"
+      },
+      "type": "lecture",
+      "room": "Room 104",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d2f"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a18"
+      },
+      "type": "lecture",
+      "room": "Room 105",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d30"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a18"
+      },
+      "type": "lecture",
+      "room": "Room 105",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d31"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a18"
+      },
+      "type": "lecture",
+      "room": "Room 105",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d32"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a18"
+      },
+      "type": "lecture",
+      "room": "Room 105",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d33"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a13"
+      },
+      "type": "lecture",
+      "room": "Room 106",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d34"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a13"
+      },
+      "type": "lecture",
+      "room": "Room 106",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d35"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d36"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d37"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d38"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d39"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d3a"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d3b"
+      }
+    },
+    {
+      "day": "Thursday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d3c"
+      }
+    },
+    {
+      "day": "Thursday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d3d"
+      }
+    },
+    {
+      "day": "Friday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d3e"
+      }
+    },
+    {
+      "day": "Friday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d3f"
+      }
+    },
+    {
+      "day": "Saturday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d40"
+      }
+    },
+    {
+      "day": "Saturday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d41"
+      }
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-08-06T07:09:59.352Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-06T07:09:59.352Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892ffc7c07b2baddd8b1d44"
+  },
+  "semester": 6,
+  "department": "Computer Science",
+  "entries": [
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a21"
+      },
+      "type": "lab",
+      "room": "Mini Project",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d45"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:55",
+        "end": "10:45"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a21"
+      },
+      "type": "lab",
+      "room": "Mini Project",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d46"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "10:45",
+        "end": "11:35"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a21"
+      },
+      "type": "lab",
+      "room": "Mini Project",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d47"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a21"
+      },
+      "type": "lab",
+      "room": "Mini Project",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d48"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "09:55",
+        "end": "10:45"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a21"
+      },
+      "type": "lab",
+      "room": "Mini Project",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d49"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "10:45",
+        "end": "11:35"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a21"
+      },
+      "type": "lab",
+      "room": "Mini Project",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d4a"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a20"
+      },
+      "type": "lab",
+      "room": "Network Lab",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d4b"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "09:55",
+        "end": "10:45"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a20"
+      },
+      "type": "lab",
+      "room": "Network Lab",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d4c"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "10:45",
+        "end": "11:35"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a20"
+      },
+      "type": "lab",
+      "room": "Network Lab",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d4d"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a19"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d4e"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a19"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d4f"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a19"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d50"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a19"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d51"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a19"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d52"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1b"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d53"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1b"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d54"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1b"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d55"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1b"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d56"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1b"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d57"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1a"
+      },
+      "type": "lecture",
+      "room": "Room 103",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d58"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1a"
+      },
+      "type": "lecture",
+      "room": "Room 103",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d59"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1a"
+      },
+      "type": "lecture",
+      "room": "Room 103",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d5a"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1a"
+      },
+      "type": "lecture",
+      "room": "Room 103",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d5b"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1a"
+      },
+      "type": "lecture",
+      "room": "Room 103",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d5c"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a22"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d5d"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a22"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d5e"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a22"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d5f"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a22"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d60"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1e"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d61"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1e"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d62"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1e"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d63"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1f"
+      },
+      "type": "lecture",
+      "room": "Room 104",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d64"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1f"
+      },
+      "type": "lecture",
+      "room": "Room 104",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d65"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1f"
+      },
+      "type": "lecture",
+      "room": "Room 104",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d66"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1c"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d67"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1c"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d68"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1c"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d69"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a1d"
+      },
+      "type": "lecture",
+      "room": "Room 102",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d6a"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d6b"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d6c"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d6d"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d6e"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d6f"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d70"
+      }
+    },
+    {
+      "day": "Thursday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc7c07b2baddd8b1d71"
+      }
+    },
+    {
+      "day": "Thursday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d72"
+      }
+    },
+    {
+      "day": "Friday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d73"
+      }
+    },
+    {
+      "day": "Friday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d74"
+      }
+    },
+    {
+      "day": "Saturday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d75"
+      }
+    },
+    {
+      "day": "Saturday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d76"
+      }
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-08-06T07:10:00.048Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-06T07:10:00.048Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6892ffc8c07b2baddd8b1d79"
+  },
+  "semester": 8,
+  "department": "Computer Science",
+  "entries": [
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2b"
+      },
+      "type": "lab",
+      "room": "Major Project",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d7a"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "09:55",
+        "end": "10:45"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2b"
+      },
+      "type": "lab",
+      "room": "Major Project",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d7b"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "10:45",
+        "end": "11:35"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2b"
+      },
+      "type": "lab",
+      "room": "Major Project",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d7c"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2b"
+      },
+      "type": "lab",
+      "room": "Major Project",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d7d"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "09:55",
+        "end": "10:45"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2b"
+      },
+      "type": "lab",
+      "room": "Major Project",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d7e"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "10:45",
+        "end": "11:35"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2b"
+      },
+      "type": "lab",
+      "room": "Major Project",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d7f"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2b"
+      },
+      "type": "lab",
+      "room": "Major Project",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d80"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "09:55",
+        "end": "10:45"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2b"
+      },
+      "type": "lab",
+      "room": "Major Project",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d81"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "10:45",
+        "end": "11:35"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2b"
+      },
+      "type": "lab",
+      "room": "Major Project",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d82"
+      }
+    },
+    {
+      "day": "Thursday",
+      "timeSlot": {
+        "start": "09:05",
+        "end": "09:55"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2b"
+      },
+      "type": "lab",
+      "room": "Major Project",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d83"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a23"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d84"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "14:00",
+        "end": "14:50"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a23"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d85"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "14:50",
+        "end": "15:40"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a23"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d86"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "15:40",
+        "end": "16:30"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a23"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d87"
+      }
+    },
+    {
+      "day": "Thursday",
+      "timeSlot": {
+        "start": "13:10",
+        "end": "14:00"
+      },
+      "subject": {
+        "$oid": "689049bbbecba1282f1b1a2a"
+      },
+      "type": "lecture",
+      "room": "Room 101",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d88"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d89"
+      }
+    },
+    {
+      "day": "Monday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d8a"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d8b"
+      }
+    },
+    {
+      "day": "Tuesday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d8c"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d8d"
+      }
+    },
+    {
+      "day": "Wednesday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d8e"
+      }
+    },
+    {
+      "day": "Thursday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d8f"
+      }
+    },
+    {
+      "day": "Thursday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d90"
+      }
+    },
+    {
+      "day": "Friday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d91"
+      }
+    },
+    {
+      "day": "Friday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d92"
+      }
+    },
+    {
+      "day": "Saturday",
+      "timeSlot": {
+        "start": "08:50",
+        "end": "09:05"
+      },
+      "type": "qcpc",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d93"
+      }
+    },
+    {
+      "day": "Saturday",
+      "timeSlot": {
+        "start": "12:25",
+        "end": "13:10"
+      },
+      "type": "lunch",
+      "_id": {
+        "$oid": "6892ffc8c07b2baddd8b1d94"
+      }
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-08-06T07:10:00.818Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-06T07:10:00.818Z"
+  },
+  "__v": 0
+}]
