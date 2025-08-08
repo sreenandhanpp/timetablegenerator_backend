@@ -1,7 +1,10 @@
 const express = require('express');
+const crypto = require('crypto');
+
 const Staff = require('../models/Staff');
 const User = require('../models/User');
 const { authenticateToken, requireAdmin } = require('../middlewares/auth');
+const { sendWelcomeEmail } = require('../utils/email');
 
 const router = express.Router();
 
@@ -21,13 +24,19 @@ router.post('/', authenticateToken, requireAdmin, async (req, res) => {
   try {
     const { name, email, phone, designation, department } = req.body;
 
-    // Check if staff already exists by email or phone
-    const existingStaff = await Staff.findOne({ 
-      $or: [{ email }, { phone }] 
+    // Check if staff already exists
+    const existingStaff = await Staff.findOne({
+      $or: [{ email }, { phone }],
     });
+
     if (existingStaff) {
-      return res.status(400).json({ message: 'Staff with this email or phone already exists' });
+      return res.status(400).json({
+        message: 'Staff with this email or phone already exists',
+      });
     }
+
+    // Generate a random password
+    const generatedPassword = crypto.randomBytes(6).toString('hex'); // 12-char password
 
     // Create staff record
     const staff = new Staff({
@@ -35,35 +44,42 @@ router.post('/', authenticateToken, requireAdmin, async (req, res) => {
       email,
       phone,
       designation,
-      department
+      department,
     });
 
     await staff.save();
 
-    // Create user account for staff
-    const defaultPassword = 'staff123'; // In production, generate random password or email them
+    // Create user record
     const user = new User({
       email,
-      password: defaultPassword,
+      password: generatedPassword,
       role: 'staff',
       name,
       department,
-      staffId: staff._id
+      staffId: staff._id,
     });
 
     await user.save();
 
-    res.status(201).json({ 
+    // Send welcome email
+    await sendWelcomeEmail({
+      name,
+      email,
+      password: generatedPassword,
+    });
+
+    res.status(201).json({
       staff,
-      message: 'Staff added successfully',
-      defaultPassword 
+      message: 'Staff added successfully and welcome email sent',
     });
   } catch (error) {
-    console.log(error)
-    res.status(500).json({ message: 'Server error', error: error.message });
+    console.error('Error adding staff:', error);
+    res.status(500).json({
+      message: 'Server error',
+      error: error.message,
+    });
   }
 });
-
 
 // Get staff by ID
 router.get('/:id', authenticateToken, async (req, res) => {
