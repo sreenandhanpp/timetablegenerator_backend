@@ -5,6 +5,7 @@ const Config = require("../models/Config");
 const { authenticateToken, requireAdmin } = require("../middlewares/auth");
 const generateTimetableData = require("../utils/generateTimetableData");
 const formatTimetable = require("../utils/formatTimeTable");
+const ActiveTimetable = require("../models/ActiveTimetable");
 
 const router = express.Router();
 
@@ -56,35 +57,112 @@ router.post("/generate", async (req, res) => {
   }
 });
 
-// Get timetable
-router.get("/", async (req, res) => {
+// GET /timetables/versions
+router.get("/versions", async (req, res) => {
   try {
-    const { semester, department } = req.query;
+    const timetables = await Timetable.aggregate([
+      {
+        $addFields: {
+          type: { $cond: [{ $eq: [{ $mod: ["$semester", 2] }, 0] }, "even", "odd"] }
+        }
+      },
+      {
+        $group: {
+          _id: { type: "$type", version: "$version" },
+          createdAt: { $first: "$createdAt" }, // first by sort order
+          department: { $first: "$department" }
+        }
+      },
+      { $sort: { createdAt: -1 } }
+    ]);
 
-    if (!semester || !department) {
-      return res
-        .status(400)
-        .json({ message: "Semester and department are required" });
+    const formatted = timetables.map(t => ({
+      department: t.department,
+      type: t._id.type,
+      version: t._id.version,
+      createdAt: t.createdAt
+        ? `${t.createdAt.getDate().toString().padStart(2, "0")}-${(t.createdAt.getMonth() + 1)
+            .toString()
+            .padStart(2, "0")}-${t.createdAt.getFullYear()}`
+        : null
+    }));
+
+    res.json(formatted);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to fetch timetable versions" });
+  }
+});
+
+
+// GET /timetables/version/:type/:version
+router.get("/version/:type/:version", async (req, res) => {
+  try {
+    const { type, version } = req.params;
+    console.log(`Fetching timetables for type: ${type}, version: ${version}`);
+
+    // Determine semester parity
+    const isEven = type.toLowerCase() === "even";
+    const semesterFilter = isEven
+      ? { $mod: ["$semester", 2] } // Mongo doesn't allow $mod here directly
+      : null;
+
+    // Since $mod in .find() is done as: { field: { $mod: [divisor, remainder] } }
+    const filter = {
+      version: parseInt(version, 10),
+      semester: { $mod: [2, isEven ? 0 : 1] }
+    };
+
+    const timetables = await Timetable.find(filter).sort({ semester: 1 });
+
+    res.json(timetables);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to fetch timetable details" });
+  }
+});
+
+
+// Activate a timetable version for all users
+router.post("/active/:type/:version", async (req, res) => {
+  try {
+    const { type, version } = req.params;
+
+    // 1️⃣ Remove any existing active timetable for this type
+    await ActiveTimetable.deleteMany({ type });
+
+    // 2️⃣ Set the new active timetable
+    const newActive = new ActiveTimetable({
+      type,
+      version: Number(version),
+      activatedAt: new Date()
+    });
+
+    await newActive.save();
+
+    res.json({ message: `Active timetable for ${type} set to version ${version}` });
+  } catch (error) {
+    console.error("Error setting active timetable:", error);
+    res.status(500).json({ error: "Failed to set active timetable" });
+  }
+});
+
+// GET /timetable/active/:type
+router.get("/active/:type", async (req, res) => {
+  try {
+    const { type } = req.params;
+    const active = await ActiveTimetable.findOne({ type });
+
+    if (!active) {
+      return res.status(404).json({ message: "No active timetable found" });
     }
 
-    const timetable = await Timetable.findOne({
-      semester: parseInt(semester),
-      department,
-      isActive: true,
-    }).populate("entries.subject");
-
-    if (!timetable) {
-      return res.status(404).json({ message: "Timetable not found" });
-    }
-
-    const timetables = await generateTimetableData(allSemesterData);
-const formattedTimetables = formatTimetableForFrontend(timetables);
-res.json(formattedTimetables);
-
+    res.json(active);
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 });
+
 
 // Get staff timetable
 router.get("/staff/:staffId", authenticateToken, async (req, res) => {
