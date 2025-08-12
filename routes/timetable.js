@@ -4,7 +4,6 @@ const Subject = require("../models/Subject");
 const Config = require("../models/Config");
 const { authenticateToken, requireAdmin } = require("../middlewares/auth");
 const generateTimetableData = require("../utils/generateTimetableData");
-const formatTimetable = require("../utils/formatTimeTable");
 const ActiveTimetable = require("../models/ActiveTimetable");
 
 const router = express.Router();
