@@ -194,4 +194,50 @@ router.get("/staff/:staffId", authenticateToken, async (req, res) => {
   }
 });
 
+// @desc    Public - Get active timetable by semester, department, and odd/even type
+// @access  Public
+router.get("/public/:semester/:dept", async (req, res) => {
+  try {
+    const { semester, dept } = req.params;
+
+    // Determine odd/even type from semester number
+    const type = Number(semester) % 2 === 0 ? "even" : "odd";
+
+    // 1️⃣ Get the active version for the given type
+    const activeVersionDoc = await ActiveTimetable.findOne({ type });
+
+    if (!activeVersionDoc) {
+      return res.status(404).json({ message: "No active timetable version found for this type" });
+    }
+
+    const { version } = activeVersionDoc;
+
+    // 2️⃣ Fetch timetable from the active version
+    const timetable = await Timetable.findOne({
+      semester: Number(semester),
+      department: dept,
+      version
+    }).populate("entries.subject");
+
+    if (!timetable) {
+      return res.status(404).json({
+        message: "No timetable found for this semester & department in active version"
+      });
+    }
+
+    // 3️⃣ Return timetable
+    res.json({
+      activeVersion: version,
+      type,
+      timetable
+    });
+
+  } catch (error) {
+    console.error("Error fetching active public timetable:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+
+
 module.exports = router;

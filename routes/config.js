@@ -1,6 +1,7 @@
 const express = require("express");
 const Config = require("../models/Config");
 const { authenticateToken, requireAdmin } = require("../middlewares/auth");
+const mongoose = require("mongoose");
 
 const router = express.Router();
 
@@ -40,20 +41,62 @@ router.get("/:id", authenticateToken, async (req, res) => {
   }
 });
 
-// Update config
-router.put("/", authenticateToken, requireAdmin, async (req, res) => {
+  // Update config
+  // Update config by ID route
+router.put("/:id", authenticateToken, requireAdmin, async (req, res) => {
   try {
-    const { semester, department } = req.body;
+    const { id } = req.params;
+    
+    // Validate ID
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "Invalid configuration ID" });
+    }
 
-    const config = await Config.findOneAndUpdate(
-      { semester, department },
-      req.body,
-      { new: true, upsert: true, runValidators: true }
+    // Prepare the update data
+    const updateData = {
+      qcpcEnabled: req.body.qcpcEnabled,
+      qcpcTime: {
+        start: req.body.qcpcStart,
+        end: req.body.qcpcEnd
+      },
+      classStartTime: req.body.classStart,
+      classEndTime: req.body.classEnd,
+      periodDuration: req.body.periodBeforeLunch, // Maintain backward compatibility
+      periodBeforeLunch: req.body.periodBeforeLunch,
+      periodAfterLunch: req.body.periodAfterLunch,
+      lunchBreak: {
+        start: req.body.lunchStart,
+        end: req.body.lunchEnd
+      },
+      breaks: req.body.breaks.map(breakItem => ({
+        name: breakItem.name,
+        start: breakItem.start,
+        end: breakItem.end
+      })),
+      // Note: semester and department shouldn't be updated as they're part of the unique index
+    };
+
+    // Find and update the config by ID
+    const updatedConfig = await Config.findByIdAndUpdate(
+      id,
+      updateData,
+      { 
+        new: true, // Return the updated document
+        runValidators: true // Run schema validators on update
+      }
     );
 
-    res.json(config);
+    if (!updatedConfig) {
+      return res.status(404).json({ message: "Configuration not found" });
+    }
+
+    res.json(updatedConfig);
   } catch (error) {
-    res.status(500).json({ message: "Server error", error: error.message });
+    console.log(error);
+    res.status(500).json({ 
+      message: "Server error", 
+      error: error.message 
+    });
   }
 });
 

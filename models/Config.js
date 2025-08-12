@@ -5,6 +5,10 @@ const configSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  department: {
+    type: String,
+    default: 'global'
+  },
   qcpcEnabled: {
     type: Boolean,
     default: true
@@ -31,6 +35,14 @@ const configSchema = new mongoose.Schema({
     type: Number,
     default: 50 // minutes
   },
+  periodBeforeLunch: {
+    type: Number,
+    default: 50 // minutes
+  },
+  periodAfterLunch: {
+    type: Number,
+    default: 50 // minutes
+  },
   breakTimes: [{
     name: {
       type: String,
@@ -48,11 +60,11 @@ const configSchema = new mongoose.Schema({
   lunchBreak: {
     start: {
       type: String,
-      default: '12:25'
+      default: '12:50'
     },
     end: {
       type: String,
-      default: '13:10'
+      default: '13:30'
     }
   },
   workingDays: {
