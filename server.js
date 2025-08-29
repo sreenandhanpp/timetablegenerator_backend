@@ -13,6 +13,8 @@ const staffRoutes = require('./routes/staff');
 const subjectRoutes = require('./routes/subjects');
 const timetableRoutes = require('./routes/timetable');
 const configRoutes = require('./routes/config');
+const activityRoutes = require('./routes/activity');
+const adminRoutes = require('./routes/admin');
 const setupDefaultAdmin = require('./setup');
 
 const app = express();
@@ -35,6 +37,9 @@ app.use('/api/staff', staffRoutes);
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/timetable', timetableRoutes);
 app.use('/api/config', configRoutes);
+app.use('/api/activities', activityRoutes);
+app.use('/api/admin', adminRoutes);
+
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

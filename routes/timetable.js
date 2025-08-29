@@ -163,80 +163,39 @@ router.get("/active/:type", async (req, res) => {
 });
 
 
-// Get staff timetable
-router.get("/staff/:staffId", authenticateToken, async (req, res) => {
+/// Get staff timetable (including breaks/QCPC)
+router.get("/staff/:staffId", async (req, res) => {
   try {
     const { staffId } = req.params;
 
-    // Find all subjects taught by this staff member
+    // Find all subjects taught by the staff
     const subjects = await Subject.find({ faculty: staffId, isActive: true });
-    const subjectIds = subjects.map((s) => s._id);
+    const subjectIds = subjects.map((s) => s._id.toString());
 
-    // Find all timetables containing these subjects
-    const timetables = await Timetable.find({
-      "entries.subject": { $in: subjectIds },
-      isActive: true,
-    }).populate("entries.subject");
+    // Get all active timetables
+    const timetables = await Timetable.find({ isActive: true })
+      .populate("entries.subject");
 
-    // Filter entries for this staff member only
+    // Filter each timetable to keep only staff's teaching slots + all breaks/QCPC/lunch
     const staffTimetables = timetables.map((timetable) => ({
       ...timetable.toObject(),
-      entries: timetable.entries.filter(
-        (entry) =>
-          entry.subject && subjectIds.some((id) => id.equals(entry.subject._id))
-      ),
+      entries: timetable.entries.filter((entry) => {
+        // Keep if it's a break/lunch/qcpc
+        if (["break", "lunch", "qcpc"].includes(entry.type)) return true;
+
+        // Keep if it's one of the staff's subjects
+        return (
+          entry.subject &&
+          subjectIds.includes(entry.subject._id.toString())
+        );
+      }),
     }));
 
     res.json(staffTimetables);
   } catch (error) {
+    console.error("Error fetching staff timetable:", error);
     res.status(500).json({ message: "Server error", error: error.message });
   }
 });
-
-// @desc    Public - Get active timetable by semester, department, and odd/even type
-// @access  Public
-router.get("/public/:semester/:dept", async (req, res) => {
-  try {
-    const { semester, dept } = req.params;
-
-    // Determine odd/even type from semester number
-    const type = Number(semester) % 2 === 0 ? "even" : "odd";
-
-    // 1️⃣ Get the active version for the given type
-    const activeVersionDoc = await ActiveTimetable.findOne({ type });
-
-    if (!activeVersionDoc) {
-      return res.status(404).json({ message: "No active timetable version found for this type" });
-    }
-
-    const { version } = activeVersionDoc;
-
-    // 2️⃣ Fetch timetable from the active version
-    const timetable = await Timetable.findOne({
-      semester: Number(semester),
-      department: dept,
-      version
-    }).populate("entries.subject");
-
-    if (!timetable) {
-      return res.status(404).json({
-        message: "No timetable found for this semester & department in active version"
-      });
-    }
-
-    // 3️⃣ Return timetable
-    res.json({
-      activeVersion: version,
-      type,
-      timetable
-    });
-
-  } catch (error) {
-    console.error("Error fetching active public timetable:", error);
-    res.status(500).json({ message: "Server error" });
-  }
-});
-
-
 
 module.exports = router;

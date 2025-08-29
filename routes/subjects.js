@@ -1,6 +1,7 @@
 const express = require('express');
 const Subject = require('../models/Subject');
 const { authenticateToken, requireAdmin } = require('../middlewares/auth');
+const ActivityLog = require('../models/ActivityLog');
 
 const router = express.Router();
 
@@ -57,6 +58,12 @@ router.post('/', authenticateToken, requireAdmin, async (req, res) => {
     await subject.save();
     await subject.populate('faculty', 'name email department');
 
+    await ActivityLog.create({
+      action: "Added subject",
+      performedBy: req.user?.name || "Admin", // from auth
+  details: `Added subject ${subjectName} (${subjectCode})`, // readable text for UI
+    });
+
     res.status(201).json(subject);
   } catch (error) {
     console.error('Error adding subject:', error);
@@ -93,6 +100,12 @@ router.put('/:id', authenticateToken, requireAdmin, async (req, res) => {
       return res.status(404).json({ message: 'Subject not found' });
     }
 
+    await ActivityLog.create({
+      action: "Updated subject",
+      performedBy: req.user?.name || "Admin", // from auth
+  details: `Updated subject ${subject.subjectName} (${subject.subjectCode})`, // readable text for UI
+    });
+
     res.json(subject);
   } catch (error) {
     res.status(500).json({ message: 'Server error', error: error.message });
@@ -111,6 +124,12 @@ router.delete('/:id', authenticateToken, requireAdmin, async (req, res) => {
     if (!subject) {
       return res.status(404).json({ message: 'Subject not found' });
     }
+
+    await ActivityLog.create({
+      action: "Deleted subject",
+      performedBy: req.user?.name || "Admin", // from auth
+  details: `Deleted subject ${subject.subjectName} (${subject.subjectCode})`,
+    });
 
     res.json({ message: 'Subject deleted successfully' });
   } catch (error) {

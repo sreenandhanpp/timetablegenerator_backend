@@ -45,37 +45,73 @@ router.post('/admin/login', async (req, res) => {
 });
 
 // Staff login
+// router.post('/staff/login', async (req, res) => {
+//   try {
+//     const { email, password } = req.body;
+
+//     const user = await User.findOne({ email, role: 'staff' }).populate('staffId');
+//     if (!user) {
+//       return res.status(401).json({ message: 'Invalid credentials' });
+//     }
+
+//     const isValidPassword = await user.comparePassword(password);
+//     if (!isValidPassword) {
+//       return res.status(401).json({ message: 'Invalid credentials' });
+//     }
+
+//     const token = generateToken(user._id);
+    
+//     res.json({
+//       token,
+//       user: {
+//         id: user._id,
+//         email: user.email,
+//         name: user.name,
+//         role: user.role,
+//         department: user.department,
+//         staffInfo: user.staffId
+//       }
+//     });
+//   } catch (error) {
+//     res.status(500).json({ message: 'Server error', error: error.message });
+//   }
+// });
+// Staff login
 router.post('/staff/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    const user = await User.findOne({ email, role: 'staff' }).populate('staffId');
-    if (!user) {
+    // Find staff by email
+    const staff = await Staff.findOne({ email });
+    if (!staff) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
 
-    const isValidPassword = await user.comparePassword(password);
-    if (!isValidPassword) {
+    // Check password against phone number
+    if (password !== staff.phone) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
 
-    const token = generateToken(user._id);
-    
+    // Generate token using staff ID
+    const token = generateToken(staff._id);
+
     res.json({
       token,
       user: {
-        id: user._id,
-        email: user.email,
-        name: user.name,
-        role: user.role,
-        department: user.department,
-        staffInfo: user.staffId
+        id: staff._id,
+        email: staff.email,
+        phone: staff.phone,
+        name: staff.name,
+        role: "staff",
+        department: staff.department,
+        designation: staff.designation
       }
     });
   } catch (error) {
-    res.status(500).json({ message: 'Server error', error: error.message });
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 });
+
 
 // Verify token
 router.get('/verify', authenticateToken, (req, res) => {
